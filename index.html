@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Meng — Política de Privacidade</title>
+<style>
+  :root {
+    --primary: #F05A28;
+    --text: #1F1F1F;
+    --muted: #6B7280;
+    --border: #E8E8E8;
+    --bg: #FFFFFF;
+    --bg-alt: #FFF8F3;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --text: #F0F0F0;
+      --muted: #9CA3AF;
+      --border: #333333;
+      --bg: #17181A;
+      --bg-alt: #1F1B18;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+  }
+  header {
+    background: var(--bg-alt);
+    border-bottom: 1px solid var(--border);
+    padding: 40px 24px 32px;
+  }
+  header .inner {
+    max-width: 680px;
+    margin: 0 auto;
+  }
+  .wordmark {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--primary);
+    margin: 0 0 8px;
+    letter-spacing: -0.02em;
+  }
+  h1 {
+    font-size: 28px;
+    margin: 0 0 6px;
+    letter-spacing: -0.01em;
+  }
+  .updated {
+    color: var(--muted);
+    font-size: 14px;
+    margin: 0;
+  }
+  main {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 40px 24px 80px;
+  }
+  section {
+    margin-bottom: 32px;
+  }
+  h2 {
+    font-size: 18px;
+    color: var(--primary);
+    margin: 0 0 12px;
+  }
+  p {
+    margin: 0 0 12px;
+    color: var(--text);
+  }
+  a {
+    color: var(--primary);
+  }
+  footer {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 0 24px 40px;
+    color: var(--muted);
+    font-size: 13px;
+  }
+</style>
+</head>
+<body>
+  <header>
+    <div class="inner">
+      <p class="wordmark">Meng</p>
+      <h1>Política de Privacidade</h1>
+      <p class="updated">Última atualização: 23 de julho de 2026</p>
+    </div>
+  </header>
+  <main>
+    <section>
+      <h2>1. Quem somos</h2>
+      <p>O Meng é operado por uma pessoa/equipe independente (sem CNPJ formal ainda no teste fechado). Contato: <a href="mailto:mengsuporte@gmail.com">mengsuporte@gmail.com</a>.</p>
+    </section>
+    <section>
+      <h2>2. Dados que coletamos</h2>
+      <p><strong>Conta:</strong> e-mail e senha (armazenada com hash pelo provedor de autenticação, nunca em texto puro).</p>
+      <p><strong>Perfil:</strong> nome de exibição, nome de usuário, foto de perfil, bio — tudo que você escolhe preencher.</p>
+      <p><strong>Conteúdo publicado:</strong> fotos de prato, notas (prato/restaurante/atendimento), comentários, curtidas, quem você segue.</p>
+      <p><strong>Denúncias e bloqueios:</strong> registro de quem denunciou/bloqueou quem, visível só pra moderação.</p>
+      <p><strong>Dados de uso (analytics):</strong> eventos de navegação e interação no app, coletados via PostHog, para entender uso e corrigir problemas. Não vendemos esses dados.</p>
+      <p><strong>Não coletamos localização.</strong> O app não pede permissão de GPS; o endereço do restaurante vem da busca que você faz (Google Places), não da sua posição.</p>
+    </section>
+    <section>
+      <h2>3. Como usamos os dados</h2>
+      <p>Operar o app: mostrar seu feed, seu perfil, os posts de quem você segue. Moderação: revisar denúncias e aplicar bloqueios. Melhorar o produto: analytics agregado de uso. Não usamos seus dados para anúncios nem os vendemos a terceiros.</p>
+    </section>
+    <section>
+      <h2>4. Com quem compartilhamos</h2>
+      <p><strong>Supabase</strong> (banco de dados, autenticação, armazenamento de fotos) — processador de dados, hospeda a infraestrutura do app.</p>
+      <p><strong>Google Places API</strong> — recebe o texto da sua busca por restaurante (não recebe seus dados de conta) pra retornar nome/endereço/nota do lugar.</p>
+      <p><strong>PostHog</strong> — recebe eventos de uso anonimizados por sessão.</p>
+      <p>Não compartilhamos dados com anunciantes.</p>
+    </section>
+    <section>
+      <h2>5. Seus direitos</h2>
+      <p>Editar ou remover seu perfil, fotos, reviews e comentários a qualquer momento, direto no app, sem precisar pedir a ninguém.</p>
+      <p>Excluir sua conta inteira, de forma definitiva e imediata, em Configurações → Excluir conta. Isso apaga seus dados de conta, reviews, fotos e comentários do nosso banco e do armazenamento de fotos.</p>
+      <p>Bloquear outro usuário, o que esconde o conteúdo de vocês dois um do outro.</p>
+      <p>Dúvidas ou pedidos sobre seus dados: <a href="mailto:mengsuporte@gmail.com">mengsuporte@gmail.com</a>.</p>
+    </section>
+    <section>
+      <h2>6. Retenção</h2>
+      <p>Seus dados ficam armazenados enquanto sua conta existir. Ao excluir a conta, os dados vinculados a ela são apagados de forma permanente e imediata (sem período de carência) — ver seção 5.</p>
+    </section>
+    <section>
+      <h2>7. Crianças</h2>
+      <p>O app não é direcionado a menores de 13 anos e não coleta intencionalmente dados de crianças.</p>
+    </section>
+    <section>
+      <h2>8. Alterações</h2>
+      <p>Podemos atualizar esta política. Mudanças relevantes serão avisadas dentro do app.</p>
+    </section>
+  </main>
+  <footer>
+    Meng — app de avaliação de restaurantes.
+  </footer>
+</body>
+</html>
