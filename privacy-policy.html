@@ -6,7 +6,7 @@
 <title>Política de privacidade — Menzza</title>
 <style>
   body { font-family: -apple-system, sans-serif; max-width: 680px; margin: 0 auto; padding: 32px 20px 64px; line-height: 1.6; color: #222; }
-  h1 { font-size: 24px; }
+  h1 { font-size: 24px; color: #8F1D2C; }
   h2 { font-size: 18px; margin-top: 32px; }
   a { color: #8F1D2C; }
 </style>
@@ -14,53 +14,65 @@
 <body>
 
 <h1>Política de privacidade — Menzza</h1>
-<p><em>Última atualização: 23 de julho de 2026</em></p>
+<p><em>Última atualização: 2 de outubro de 2026</em></p>
 
 <h2>1. Quem somos</h2>
-<p>O Menzza é operado por uma pessoa/equipe independente (sem CNPJ formal ainda no teste fechado). Contato: <strong>mengsuporte@gmail.com</strong>.</p>
+<p>O Menzza é operado por uma pessoa/equipe independente (sem CNPJ formal ainda). Contato: <strong>mengsuporte@gmail.com</strong>.</p>
 
 <h2>2. Dados que coletamos</h2>
 <ul>
 <li><strong>Conta</strong>: e-mail e senha (armazenada com hash pelo provedor de autenticação, nunca em texto puro).</li>
 <li><strong>Perfil</strong>: nome de exibição, nome de usuário, foto de perfil, bio — tudo que você escolhe preencher.</li>
-<li><strong>Conteúdo publicado</strong>: fotos de prato, notas (prato/restaurante/atendimento), comentários, curtidas, quem você segue.</li>
+<li><strong>Conteúdo publicado</strong>: fotos de prato e o nome de cada prato, notas (comida, atendimento, ambiente e custo-benefício), comentários, curtidas, quem você segue e as reviews que você compartilha com outras pessoas.</li>
+<li><strong>Notificações</strong>: registro das notificações que você recebe dentro do app (novo seguidor, curtida, comentário, compartilhamento e nova review de quem você segue).</li>
 <li><strong>Denúncias e bloqueios</strong>: registro de quem denunciou/bloqueou quem, visível só pra moderação.</li>
-<li><strong>Dados de uso (analytics)</strong>: eventos de navegação e interação no app (ex.: telas visitadas, botões tocados), coletados via PostHog, para entender uso e corrigir problemas. Não vendemos esses dados.</li>
-<li><strong>Token de notificação push</strong>: um identificador do seu aparelho, usado só pra mandar notificação de novo seguidor/curtida/comentário. Removido ao sair da conta ou excluir a conta.</li>
+<li><strong>Contagens de uso para evitar abuso</strong>: quantas buscas, fotos, reviews, comentários e outras ações cada conta fez nas últimas horas, usadas só para aplicar limites contra uso automatizado (robôs).</li>
+<li><strong>Dados de uso (analytics)</strong>: eventos de interação e erros do app, coletados via PostHog, para entender uso e corrigir problemas. Não vendemos esses dados.</li>
+<li><strong>Token de notificação push</strong>: um identificador do seu aparelho, usado só pra mandar as notificações listadas acima. Removido ao sair da conta ou excluir a conta.</li>
 <li><strong>Não coletamos localização.</strong> O app não pede permissão de GPS; o endereço do restaurante vem da busca que você faz (Google Places), não da sua posição.</li>
 </ul>
 
-<h2>3. Como usamos os dados</h2>
+<h2>3. O que fica visível para outras pessoas</h2>
 <ul>
-<li>Operar o app: mostrar seu feed, seu perfil, os posts de quem você segue.</li>
-<li>Moderação: revisar denúncias e aplicar bloqueios.</li>
+<li>Seu perfil (nome, nome de usuário, foto, bio) e o que você publica (fotos, nomes de prato, notas, comentários) ficam visíveis para outros usuários do Menzza, exceto para quem você bloqueou ou quem bloqueou você.</li>
+<li>As fotos publicadas ficam armazenadas em links públicos: qualquer pessoa que tiver o endereço exato de uma foto consegue abri-la. Não publique fotos que você não queira tornar públicas.</li>
+</ul>
+
+<h2>4. Como usamos os dados</h2>
+<ul>
+<li>Operar o app: mostrar seu feed, seu perfil, os posts de quem você segue e as avaliações de cada restaurante.</li>
+<li>Enviar notificações e e-mails do serviço (ex.: confirmação de e-mail, redefinição de senha).</li>
+<li>Moderação e segurança: revisar denúncias, aplicar bloqueios e limitar uso automatizado.</li>
 <li>Melhorar o produto: analytics agregado de uso.</li>
 <li>Não usamos seus dados para anúncios nem os vendemos a terceiros.</li>
 </ul>
 
-<h2>4. Com quem compartilhamos</h2>
+<h2>5. Com quem compartilhamos</h2>
 <ul>
 <li><strong>Supabase</strong> (banco de dados, autenticação, armazenamento de fotos) — processador de dados, hospeda a infraestrutura do app.</li>
 <li><strong>Google Places API</strong> — recebe o texto da sua busca por restaurante (não recebe seus dados de conta) pra retornar nome/endereço/nota do lugar.</li>
-<li><strong>PostHog</strong> — recebe eventos de uso anonimizados por sessão.</li>
+<li><strong>Google (Gmail)</strong> — usado para enviar os e-mails do serviço; recebe o seu endereço de e-mail e o conteúdo da mensagem.</li>
+<li><strong>Expo, Apple e Google (notificações push)</strong> — recebem o token do seu aparelho e o texto da notificação, para entregá-la no seu celular.</li>
+<li><strong>PostHog</strong> — recebe eventos de uso e erros do app.</li>
 <li>Não compartilhamos dados com anunciantes.</li>
 </ul>
 
-<h2>5. Seus direitos</h2>
+<h2>6. Seus direitos</h2>
 <ul>
 <li><strong>Editar ou remover</strong> seu perfil, fotos, reviews e comentários a qualquer momento, direto no app, sem precisar pedir a ninguém.</li>
 <li><strong>Excluir sua conta inteira</strong>, de forma definitiva e imediata, em Configurações → Excluir conta. Isso apaga seus dados de conta, reviews, fotos e comentários do nosso banco e do armazenamento de fotos.</li>
 <li><strong>Bloquear outro usuário</strong>, o que esconde o conteúdo de vocês dois um do outro.</li>
+<li><strong>Desativar notificações push</strong> nas configurações do app ou do celular.</li>
 <li>Dúvidas ou pedidos sobre seus dados: <strong>mengsuporte@gmail.com</strong>.</li>
 </ul>
 
-<h2>6. Retenção</h2>
-<p>Seus dados ficam armazenados enquanto sua conta existir. Ao excluir a conta, os dados vinculados a ela são apagados de forma permanente e imediata (sem período de carência) — ver seção 5.</p>
+<h2>7. Retenção</h2>
+<p>Seus dados ficam armazenados enquanto sua conta existir. Ao excluir a conta, os dados vinculados a ela são apagados de forma permanente e imediata (sem período de carência) — ver seção 6.</p>
 
-<h2>7. Crianças</h2>
+<h2>8. Crianças</h2>
 <p>O app não é direcionado a menores de 13 anos e não coleta intencionalmente dados de crianças.</p>
 
-<h2>8. Alterações</h2>
+<h2>9. Alterações</h2>
 <p>Podemos atualizar esta política. Mudanças relevantes serão avisadas dentro do app.</p>
 
 </body>
