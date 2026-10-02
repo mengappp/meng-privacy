@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Menzza — E-mail confirmado</title>
+<style>
+  :root {
+    --primary: #8F1D2C;
+    --text: #1C1C1E;
+    --muted: #6B7280;
+    --bg: #FFFFFF;
+    --bg-alt: #FBF4F5;
+    --error: #D92D20;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --text: #F0F0F0;
+      --muted: #9CA3AF;
+      --bg: #17181A;
+      --bg-alt: #1F1615;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    background: var(--bg-alt);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  .card {
+    width: 100%;
+    max-width: 380px;
+    background: var(--bg);
+    border-radius: 16px;
+    padding: 32px 24px;
+    text-align: center;
+  }
+  .brand { color: var(--primary); font-weight: 700; font-size: 20px; margin: 0 0 24px; }
+  .icon { font-size: 44px; margin: 0 0 12px; }
+  h1 { font-size: 22px; margin: 0 0 12px; }
+  p { color: var(--muted); line-height: 1.5; margin: 0; }
+  .error h1 { color: var(--error); }
+  [hidden] { display: none; }
+</style>
+</head>
+<body>
+  <main class="card">
+    <p class="brand">Menzza</p>
+
+    <section id="ok">
+      <p class="icon">✅</p>
+      <h1>E-mail confirmado!</h1>
+      <p>Pode voltar pro app Menzza e entrar com seu e-mail e senha.</p>
+    </section>
+
+    <section id="error" class="error" hidden>
+      <p class="icon">⚠️</p>
+      <h1>Esse link não funcionou</h1>
+      <p>Ele pode ter expirado ou já ter sido usado. Volte pro app Menzza, tente entrar e, se pedir, toque em <strong>Reenviar e-mail</strong>.</p>
+    </section>
+  </main>
+
+  <script>
+    // O Supabase redireciona pra cá depois de confirmar o e-mail, com o
+    // resultado no fragmento da URL (#...). Esta página não usa a sessão
+    // que vem junto -- a pessoa entra pelo app -- então só lê se deu erro
+    // e limpa o fragmento da barra de endereço.
+    var hash = new URLSearchParams(window.location.hash.slice(1));
+    var query = new URLSearchParams(window.location.search);
+    if (hash.get("error") || query.get("error")) {
+      document.getElementById("ok").hidden = true;
+      document.getElementById("error").hidden = false;
+    }
+    if (window.location.hash) {
+      history.replaceState(null, "", window.location.pathname);
+    }
+  </script>
+</body>
+</html>
