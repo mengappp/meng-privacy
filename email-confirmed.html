@@ -46,6 +46,17 @@
   h1 { font-size: 22px; margin: 0 0 12px; }
   p { color: var(--muted); line-height: 1.5; margin: 0; }
   .error h1 { color: var(--error); }
+  .button {
+    display: block;
+    margin: 24px 0 12px;
+    padding: 14px 20px;
+    border-radius: 12px;
+    background: var(--primary);
+    color: #FFFFFF;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .note { font-size: 14px; }
   [hidden] { display: none; }
 </style>
 </head>
@@ -56,13 +67,17 @@
     <section id="ok">
       <p class="icon">✅</p>
       <h1>E-mail confirmado!</h1>
-      <p>Pode voltar pro app Menzza e entrar com seu e-mail e senha.</p>
+      <p>Sua conta está ativa. Agora é só entrar no app com o e-mail e a senha que você cadastrou.</p>
+      <a class="button" href="appgastronomico://login">Abrir o Menzza e entrar</a>
+      <p class="note">No app, toque em <strong>Entrar</strong> (não em "Criar conta" de novo — a conta já existe).</p>
     </section>
 
     <section id="error" class="error" hidden>
       <p class="icon">⚠️</p>
       <h1>Esse link não funcionou</h1>
-      <p>Ele pode ter expirado ou já ter sido usado. Volte pro app Menzza, tente entrar e, se pedir, toque em <strong>Reenviar e-mail</strong>.</p>
+      <p>Ele pode ter expirado ou já ter sido usado. Se você já confirmou antes, sua conta está ativa: é só entrar no app.</p>
+      <a class="button" href="appgastronomico://login">Abrir o Menzza e entrar</a>
+      <p class="note">Se o app disser que falta confirmar, toque em <strong>Reenviar e-mail</strong> na tela de cadastro.</p>
     </section>
   </main>
 
